@@ -10,7 +10,7 @@ protoc --go_out=./golang --go_opt=paths=source_relative \
     ./${SERVICE_NAME}/*.proto
 
 cd golang/${SERVICE_NAME}
-go mod init github.com/huseyinbabal/microservices-proto/golang/${SERVICE_NAME} || true
+go mod init github.com/andrei-kozel/microservices-demo-proto/golang/${SERVICE_NAME} || true
 go mod tidy
 cd ../../
 git config --global user.email "kozel.andrei.94@gmail.com"
