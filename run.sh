@@ -48,7 +48,7 @@ echo "::endgroup::"
 
 # Commit and push the changes
 echo "::group::Committing and tagging"
-cd ../../
+cd ../
 git config --global user.email "kozel.andrei.94@gmail.com"
 git config --global user.name "Andrei Kozel"
 git add .
