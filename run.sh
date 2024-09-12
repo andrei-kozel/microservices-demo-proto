@@ -38,7 +38,7 @@ echo "::endgroup::"
 
 # Initialize the Go module inside the service directory
 echo "::group::Go mod init and tidy"
-cd golang
+cd golang/${SERVICE_NAME}
 echo "Current directory: $(pwd)"
 ls -la
 go mod init github.com/andrei-kozel/microservices-demo-proto/golang/${SERVICE_NAME} || true
@@ -48,9 +48,7 @@ echo "::endgroup::"
 
 # Commit and push the changes
 echo "::group::Committing and tagging"
-echo "Current directory: $(pwd)"
-cd ..
-echo "Current directory: $(pwd)"
+cd ../..
 git config --global user.email "kozel.andrei.94@gmail.com"
 git config --global user.name "Andrei Kozel"
 git add .
