@@ -53,7 +53,7 @@ git config --global user.email "kozel.andrei.94@gmail.com"
 git config --global user.name "Andrei Kozel"
 git add .
 git commit -am "proto update" || true
-git tag -fa golang/${SERVICE_NAME}/${RELEASE_VERSION} -m "golang/${SERVICE_NAME}/${RELEASE_VERSION}"
-git push origin refs/tags/golang/${SERVICE_NAME}/${RELEASE_VERSION}
-echo "Committed and pushed tag golang/${SERVICE_NAME}/${RELEASE_VERSION}"
+git tag -fa ${RELEASE_VERSION} -m "${RELEASE_VERSION}"
+git push origin refs/tags/${RELEASE_VERSION}
+echo "Committed and pushed tag ${RELEASE_VERSION}"
 echo "::endgroup::"
